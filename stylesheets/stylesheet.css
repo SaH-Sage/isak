@@ -1397,8 +1397,6 @@ h1 {
 
 
 
-
-
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
 *, *:before, *:after {
   box-sizing: border-box;
@@ -2597,6 +2595,7 @@ body {
 .footer--love a {
   color: #43abf0;
 }
+
 
 
 
