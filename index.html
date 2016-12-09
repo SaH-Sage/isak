@@ -201,7 +201,67 @@
         <br/>
 <h3>
 
+<div class="wrapper">
+  <div class="hulk">
+    <div class="head">
+      <div class="mouth"></div>
+    </div>
+    <div class="right-arm"></div>
+    <div class="fist"></div>
+    <div class="left-arm"></div>
+    <div class="body"></div>
+    <div class="right-leg"></div>
+    <div class="left-leg"></div>
+  </div>
 
+  <div class="captain">
+    <div class="head">A</div>
+    <div class="body">
+      <div class="star"></div>
+    </div>
+    <div class="arms"></div>
+    <div class="shield">
+      <div class="star"></div>
+    </div>
+    <div class="hands"></div>
+    <div class="legs"></div>
+    <div class="boots"></div>
+  </div>
+
+  <div class="ironman">
+    <div class="helmet">
+      <div class="mask"></div>
+    </div>
+    <div class="right-arm"></div>
+    <div class="left-arm"></div>
+    <div class="body">
+      <div class="power"></div>
+    </div>
+    <div class="right-leg"></div>
+    <div class="left-leg"></div>
+  </div>
+
+  <div class="thor">
+    <div class="helmet"></div>
+    <div class="head">
+      <div class="beard"></div>
+    </div>
+    <div class="cap"></div>
+    <div class="arm-right"></div>
+    <div class="arm-left"></div>
+    <div class="body"></div>
+    <div class="hammer"></div>
+    <div class="legs"></div>
+    <div class="feet"></div>
+  </div>
+</div>
+
+
+</div>
+
+<div class="footer--love">
+  <p>With <span class="love-heart"></span>by <a href="https://twitter.com/mariosmaselli" target="_blank">@mariosmaselli</a></p>
+</div>
 
 <div class="footer--love">
   <p>With <span class="love-heart"></span>by <a href="https://twitter.com/mariosmaselli" target="_blank">@mariosmaselli</a></p>
@@ -226,68 +286,6 @@
 <p style="color:black;">Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or contact you know who ;)</p>
       </section>
     </div>
-<script>
-  'use strict';
-
-let canvas = document.querySelector('canvas'),
-    ctx = canvas.getContext('2d'),
-    letters = '01',
-    height = canvas.height = window.innerHeight,
-    width = canvas.width = window.innerWidth,
-    font_size = 10,
-    columns = width / font_size,
-    drops = [],
-    frame = 1;
-
-letters = letters.split("");
-
-for(let i = 0; i < columns; i++){
-  drops[i] = 1;
-}
-
-clear();
-
-function draw(){
-  if(frame == 1){
-    clear();
-    showLetters();
-  }else if(frame == 2){
-    frame = 0;
-  }
-
-  frame++;
-  window.requestAnimationFrame(draw);
-}
-
-function showLetters(){
-  ctx.fillStyle = "#0F0";
-  ctx.font = font_size + "px arial";
-  
-  for(let i = 0; i < drops.length; i++){
-      let text = letters[Math.floor(Math.random()*letters.length)];
-      let textPosY = drops[i] * font_size;
-
-      ctx.fillText(text,i*font_size,textPosY);
-
-      if(textPosY > height && Math.random() > 0.956){
-        drops[i] = 0;
-      }
-
-      drops[i]++;
-    }
-}
-
-function clear(){
-  ctx.fillStyle = 'rgba(0,0,0,0.05)';
-  ctx.fillRect(0,0,width,height);
-}
-
-window.requestAnimationFrame(draw);
-window.addEventListener('resize', function(){
-  height = canvas.height = window.innerHeight;
-  width = canvas.width = window.innerWidth;
-})
-</script>
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
